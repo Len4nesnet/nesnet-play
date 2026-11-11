@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="Nesnet Games">
+  <meta name="theme-color" content="#000000">
+  <meta name="description" content="Play Nesnet games on Roblox">
+  <title>Nesnet Games</title>
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="icon" href="apple-touch-icon.png" type="image/png">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html, body {
+      background: #000;
+      color: #fff;
+      min-height: 100%;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100dvh;
+      padding: max(24px, env(safe-area-inset-top)) 20px max(24px, env(safe-area-inset-bottom));
+    }
+
+    h1 {
+      font-size: clamp(2.6rem, 10vw, 5.5rem);
+      font-weight: 800;
+      letter-spacing: 0.02em;
+      text-align: center;
+      line-height: 1.1;
+      margin-bottom: 0.45em;
+    }
+
+    .games {
+      width: 100%;
+      max-width: 720px;
+      display: flex;
+      flex-direction: column;
+      gap: 1.4rem;
+    }
+
+    .game {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.55rem;
+    }
+
+    .play {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      min-height: 28vh;
+      padding: 1.1rem 1.2rem;
+      border-radius: 28px;
+      text-decoration: none;
+      font-weight: 800;
+      text-align: center;
+      line-height: 1.15;
+      border: 6px solid #fff;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .play:focus-visible {
+      outline: 6px solid #fff;
+      outline-offset: 6px;
+    }
+
+    .play:active {
+      transform: scale(0.98);
+    }
+
+    .play .name {
+      font-size: clamp(2.1rem, 8vw, 3.8rem);
+      display: block;
+    }
+
+    .play .action {
+      font-size: clamp(1.5rem, 5.5vw, 2.4rem);
+      font-weight: 800;
+      margin-top: 0.15em;
+      display: block;
+    }
+
+    .ring {
+      background: #FFDD00;
+      color: #000;
+    }
+
+    .dragon {
+      background: #FF2A2A;
+      color: #fff;
+    }
+
+    .fallback {
+      color: #fff;
+      font-size: clamp(1.05rem, 3.6vw, 1.35rem);
+      font-weight: 600;
+      text-decoration: underline;
+      text-underline-offset: 0.15em;
+    }
+
+    .fallback:focus-visible {
+      outline: 3px solid #fff;
+      outline-offset: 4px;
+    }
+
+    .note {
+      margin-top: 1.8rem;
+      max-width: 36rem;
+      text-align: center;
+      font-size: clamp(0.95rem, 3.2vw, 1.2rem);
+      line-height: 1.35;
+      color: #fff;
+      font-weight: 500;
+    }
+  </style>
+</head>
+<body>
+  <h1>Nesnet Games</h1>
+
+  <div class="games">
+    <div class="game">
+      <a class="play ring"
+         href="https://www.roblox.com/games/start?placeId=97233307430545">
+        <span class="name">Ring Master</span>
+        <span class="action">Play</span>
+      </a>
+      <a class="fallback" href="https://www.roblox.com/games/97233307430545">Open Ring Master page</a>
+    </div>
+
+    <div class="game">
+      <a class="play dragon"
+         href="https://www.roblox.com/games/start?placeId=113383827249232">
+        <span class="name">Dragon Master</span>
+        <span class="action">Play</span>
+      </a>
+      <a class="fallback" href="https://www.roblox.com/games/113383827249232">Open Dragon Master page</a>
+    </div>
+  </div>
+
+  <p class="note">You must be signed in to Roblox and a member of the Nesnet community.</p>
+</body>
+</html>
