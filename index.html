@@ -93,15 +93,32 @@
       display: block;
     }
 
-    .ring {
-      background: #FFDD00;
-      color: #000;
-    }
-
-    .dragon {
-      background: #FF2A2A;
+    .tile {
+      padding: 0;
+      min-height: 0;
+      overflow: hidden;
+      background: #000;
       color: #fff;
     }
+
+    .tile img {
+      display: block;
+      width: 100%;
+      max-width: 420px;
+      height: auto;
+      aspect-ratio: 1 / 1;
+    }
+
+    .tile .action {
+      width: 100%;
+      background: #fff;
+      color: #000;
+      padding: 0.35em 0;
+      margin-top: 0;
+      font-size: clamp(2rem, 8vw, 3.2rem);
+    }
+
+    .play.tile { max-width: 420px; align-self: center; }
 
     .fallback {
       color: #fff;
@@ -132,18 +149,18 @@
 
   <div class="games">
     <div class="game">
-      <a class="play ring"
+      <a class="play tile" aria-label="Play Ring Master"
          href="https://www.roblox.com/games/start?placeId=97233307430545">
-        <span class="name">Ring Master</span>
+        <img src="ring-master-tile.png" alt="Ring Master">
         <span class="action">Play</span>
       </a>
       <a class="fallback" href="https://www.roblox.com/games/97233307430545">Open Ring Master page</a>
     </div>
 
     <div class="game">
-      <a class="play dragon"
+      <a class="play tile" aria-label="Play Dragon Master"
          href="https://www.roblox.com/games/start?placeId=113383827249232">
-        <span class="name">Dragon Master</span>
+        <img src="dragon-master-tile.png" alt="Dragon Master">
         <span class="action">Play</span>
       </a>
       <a class="fallback" href="https://www.roblox.com/games/113383827249232">Open Dragon Master page</a>
